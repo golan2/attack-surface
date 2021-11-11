@@ -1,0 +1,16 @@
+server:
+  port: 8081
+logging:
+  level:
+    ROOT: INFO
+    golan.attack.surface: DEBUG
+  pattern.console: >-
+    |%-5p|N|%X{txn_id}|%date{"yyyy-MM-dd HH:mm:ss,SSS"}  [%t] %c{0}:%L - %m%n
+spring:
+  main:
+    banner-mode: "off"
+  mvc:
+    log-request-details: true
+service:
+  input:
+    file-name: "/Users/ig2258/git/golan2/attack-surface/src/main/resources/input.json"
